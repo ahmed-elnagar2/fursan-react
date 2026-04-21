@@ -202,7 +202,7 @@ const QuoteRequest = ({ initialServices }: QuoteRequestProps) => {
       <Navbar />
 
       <main>
-        <section className="relative overflow-hidden border-b border-gold-light/50 bg-[radial-gradient(circle_at_top,rgba(207,175,103,0.22),transparent_42%),linear-gradient(180deg,#fffaf2_0%,#f6efe0_100%)] dark:bg-[radial-gradient(circle_at_top,rgba(207,175,103,0.08),transparent_50%),linear-gradient(180deg,rgba(18,18,18,1)_0%,rgba(24,24,24,1)_100%)]">
+        <section className="relative overflow-hidden border-b border-gold-light/50 quote-hero-bg">
           <div className="container mx-auto grid max-w-7xl gap-10 px-6 pt-36 pb-16 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
             <div>
               <span className="inline-flex rounded-full border border-gold-light bg-card/80 px-4 py-2 text-xs font-semibold text-gold-dark">

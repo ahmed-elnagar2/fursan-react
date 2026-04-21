@@ -178,4 +178,12 @@
   .nav-link-modern:focus-visible {
     @apply outline-none ring-2 ring-gold-medium/40;
   }
+
+  .quote-hero-bg {
+    background: radial-gradient(circle at top, rgba(207, 175, 103, 0.22), transparent 42%), linear-gradient(180deg, #fffaf2 0%, #f6efe0 100%);
+  }
+
+  .dark .quote-hero-bg {
+    background: radial-gradient(circle at top, rgba(207, 175, 103, 0.1), transparent 50%), linear-gradient(180deg, #121212 0%, #1a1a1a 100%) !important;
+  }
 }

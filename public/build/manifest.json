@@ -16,8 +16,8 @@
       "_ApplicationLogo-DtQhb9SS.js"
     ]
   },
-  "_Footer-C8-M1Db0.js": {
-    "file": "assets/Footer-C8-M1Db0.js",
+  "_Footer-BL81UVlU.js": {
+    "file": "assets/Footer-BL81UVlU.js",
     "name": "Footer",
     "imports": [
       "_jsx-runtime-Bq3x7umQ.js",
@@ -161,7 +161,7 @@
     ]
   },
   "resources/js/Pages/AdminDashboard.tsx": {
-    "file": "assets/AdminDashboard-DKzqG5Gs.js",
+    "file": "assets/AdminDashboard-CMVIIXyv.js",
     "name": "AdminDashboard",
     "src": "resources/js/Pages/AdminDashboard.tsx",
     "isDynamicEntry": true,
@@ -299,7 +299,7 @@
     ]
   },
   "resources/js/Pages/Index.tsx": {
-    "file": "assets/Index-CHHP43kO.js",
+    "file": "assets/Index-BZleFfNA.js",
     "name": "Index",
     "src": "resources/js/Pages/Index.tsx",
     "isDynamicEntry": true,
@@ -309,7 +309,7 @@
       "_index.esm-fvXurfpY.js",
       "_useLanguage-cBfNiWYv.js",
       "_logopng-CLVUPG31.js",
-      "_Footer-C8-M1Db0.js",
+      "_Footer-BL81UVlU.js",
       "_dist-EMGzz2rJ.js",
       "_globe-BrbvGbkt.js",
       "_textarea-DOS3WUsa.js",
@@ -385,7 +385,7 @@
     ]
   },
   "resources/js/Pages/QuoteRequest.tsx": {
-    "file": "assets/QuoteRequest-C8ZxH5Kd.js",
+    "file": "assets/QuoteRequest-BsQqAwrf.js",
     "name": "QuoteRequest",
     "src": "resources/js/Pages/QuoteRequest.tsx",
     "isDynamicEntry": true,
@@ -395,7 +395,7 @@
       "_dist-Bc9HYzLj.js",
       "_useLanguage-cBfNiWYv.js",
       "_logopng-CLVUPG31.js",
-      "_Footer-C8-M1Db0.js",
+      "_Footer-BL81UVlU.js",
       "_dist-EMGzz2rJ.js",
       "_plus-DZC95Cxz.js",
       "_textarea-DOS3WUsa.js"
@@ -415,7 +415,7 @@
     ]
   },
   "resources/js/app.tsx": {
-    "file": "assets/app-DP4IZ5m-.js",
+    "file": "assets/app-CsM0qcXx.js",
     "name": "app",
     "src": "resources/js/app.tsx",
     "isEntry": true,
@@ -447,7 +447,7 @@
       "resources/js/Pages/Welcome.tsx"
     ],
     "css": [
-      "assets/app-9LtCJMRf.css"
+      "assets/app-sAkJRKZd.css"
     ]
   },
   "resources/js/assets/catering-service.jpg": {
