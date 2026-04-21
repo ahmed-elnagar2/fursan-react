@@ -23,6 +23,8 @@ class SettingsController extends Controller
             'email' => 'nullable|email',
             'address' => 'nullable|string',
             'address_en' => 'nullable|string',
+            'site_title' => 'nullable|string',
+            'site_title_en' => 'nullable|string',
             'hero_title' => 'nullable|string',
             'hero_subtitle' => 'nullable|string',
             'company_description' => 'nullable|string',

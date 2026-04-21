@@ -80,6 +80,14 @@ const AdminSettings = () => {
           </h3>
           <div className="space-y-4">
             <div>
+              <Label className="mb-1.5 block">Site Title (العربية)</Label>
+              <Input value={settings?.site_title || ""} onChange={e => setSettings({ ...settings, site_title: e.target.value })} className="rounded-xl border-border/60" />
+            </div>
+            <div>
+              <Label className="mb-1.5 block">Site Title (English)</Label>
+              <Input value={settings?.site_title_en || ""} onChange={e => setSettings({ ...settings, site_title_en: e.target.value })} dir="ltr" className="rounded-xl border-border/60" />
+            </div>
+            <div>
               <Label className="mb-1.5 block">{t("hero_title") || "عنوان الهيرو"}</Label>
               <Input value={settings?.hero_title || ""} onChange={e => setSettings({ ...settings, hero_title: e.target.value })} className="rounded-xl border-border/60 font-bold" />
             </div>

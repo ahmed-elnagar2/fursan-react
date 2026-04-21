@@ -12,11 +12,10 @@ class PageController extends Controller
     public function index()
     {
         $services = Service::where('is_active', true)->orderBy('sort_order')->get();
-        $settings = SiteSetting::all()->pluck('value', 'key');
+        $settings = SiteSetting::first();
         
         return Inertia::render('Index', [
             'initialServices' => $services,
-            'initialSettings' => $settings,
         ]);
     }
 

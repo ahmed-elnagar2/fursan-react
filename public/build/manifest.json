@@ -16,8 +16,8 @@
       "_ApplicationLogo-DtQhb9SS.js"
     ]
   },
-  "_Footer-D3py9F_C.js": {
-    "file": "assets/Footer-D3py9F_C.js",
+  "_Footer-DPKPP2GO.js": {
+    "file": "assets/Footer-DPKPP2GO.js",
     "name": "Footer",
     "imports": [
       "_jsx-runtime-Bq3x7umQ.js",
@@ -161,7 +161,7 @@
     ]
   },
   "resources/js/Pages/AdminDashboard.tsx": {
-    "file": "assets/AdminDashboard-BMxqX4Yh.js",
+    "file": "assets/AdminDashboard-BQ29Gbf7.js",
     "name": "AdminDashboard",
     "src": "resources/js/Pages/AdminDashboard.tsx",
     "isDynamicEntry": true,
@@ -299,7 +299,7 @@
     ]
   },
   "resources/js/Pages/Index.tsx": {
-    "file": "assets/Index-BGAleCZx.js",
+    "file": "assets/Index-BLl9Mk_c.js",
     "name": "Index",
     "src": "resources/js/Pages/Index.tsx",
     "isDynamicEntry": true,
@@ -309,7 +309,7 @@
       "_index.esm-fvXurfpY.js",
       "_useLanguage-cBfNiWYv.js",
       "_logopng-CLVUPG31.js",
-      "_Footer-D3py9F_C.js",
+      "_Footer-DPKPP2GO.js",
       "_dist-EMGzz2rJ.js",
       "_globe-BrbvGbkt.js",
       "_textarea-DOS3WUsa.js",
@@ -385,7 +385,7 @@
     ]
   },
   "resources/js/Pages/QuoteRequest.tsx": {
-    "file": "assets/QuoteRequest-C_cFHUwA.js",
+    "file": "assets/QuoteRequest-BBTVWQWV.js",
     "name": "QuoteRequest",
     "src": "resources/js/Pages/QuoteRequest.tsx",
     "isDynamicEntry": true,
@@ -395,7 +395,7 @@
       "_dist-Bc9HYzLj.js",
       "_useLanguage-cBfNiWYv.js",
       "_logopng-CLVUPG31.js",
-      "_Footer-D3py9F_C.js",
+      "_Footer-DPKPP2GO.js",
       "_dist-EMGzz2rJ.js",
       "_plus-DZC95Cxz.js",
       "_textarea-DOS3WUsa.js"
@@ -415,7 +415,7 @@
     ]
   },
   "resources/js/app.tsx": {
-    "file": "assets/app-BvjjyHbX.js",
+    "file": "assets/app-B05Q5PBY.js",
     "name": "app",
     "src": "resources/js/app.tsx",
     "isEntry": true,

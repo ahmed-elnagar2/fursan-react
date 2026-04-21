@@ -19,8 +19,10 @@ class SiteSetting extends Model
         'hero_subtitle', 
         'company_description', 
         'company_description_en', 
-        'happy_clients', 
-        'years_experience', 
+        'site_title',
+        'site_title_en',
+        'happy_clients',
+        'years_experience',
         'trade_partners'
     ];
 }

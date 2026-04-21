@@ -5,12 +5,17 @@ import { useLanguage } from "@/hooks/useLanguage";
 import heroBg from "@/assets/hero-bg.jpg";
 import logoPng from "@/assets/logoonly.png";
 
+import { usePage } from "@inertiajs/react";
+import { PageProps } from "@/types";
+
 interface HeroSectionProps {
-  settings?: Record<string, string>;
+  settings?: any;
 }
 
-const HeroSection = ({ settings }: HeroSectionProps) => {
+const HeroSection = ({ settings: propsSettings }: HeroSectionProps) => {
   const { t, language } = useLanguage();
+  const { settings: sharedSettings } = usePage<PageProps>().props;
+  const settings = propsSettings || sharedSettings;
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">

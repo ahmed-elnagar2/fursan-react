@@ -16,14 +16,19 @@ const generateCaptcha = () => {
   return { question: `${a} + ${b} = ?`, answer: a + b };
 };
 
+import { usePage } from "@inertiajs/react";
+import { PageProps } from "@/types";
+
 interface ContactSectionProps {
-  settings?: Record<string, string>;
+  settings?: any;
 }
 
-const ContactSection = ({ settings }: ContactSectionProps) => {
+const ContactSection = ({ settings: propsSettings }: ContactSectionProps) => {
   const ref = useRef(null);
   const inView = useInView(ref, { margin: "-100px" });
   const { t, language } = useLanguage();
+  const { settings: sharedSettings } = usePage<PageProps>().props;
+  const settings = propsSettings || sharedSettings;
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
   const [sending, setSending] = useState(false);
   const [captcha, setCaptcha] = useState(generateCaptcha);

@@ -6,20 +6,25 @@ import ContactSection from "@/Components/ContactSection";
 import Footer from "@/Components/Footer";
 import { Head } from "@inertiajs/react";
 
+import { usePage } from "@inertiajs/react";
+import { PageProps } from "@/types";
+
 interface IndexProps {
   initialServices?: any[];
-  initialSettings?: Record<string, string>;
 }
 
-const Index = ({ initialServices, initialSettings }: IndexProps) => {
+const Index = ({ initialServices }: IndexProps) => {
+  const { settings } = usePage<PageProps>().props;
+  const siteTitle = settings?.site_title || "Forsan Group";
+
   return (
     <div className="min-h-screen">
-      <Head title="Home" />
+      <Head title={siteTitle} />
       <Navbar />
-      <HeroSection settings={initialSettings} />
+      <HeroSection />
       <AboutSection />
       <ServicesSection services={initialServices} />
-      <ContactSection settings={initialSettings} />
+      <ContactSection />
       <Footer />
     </div>
   );
