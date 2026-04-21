@@ -42,7 +42,7 @@
     --gold-pale: 35 35% 90%;
     --charcoal: 0 0% 30%;
 
-    --font-arabic: 'Noto Kufi Arabic', sans-serif;
+    --font-arabic: "Noto Kufi Arabic", sans-serif;
     --font-display: 'Playfair Display', serif;
 
     --sidebar-background: 0 0% 98%;
@@ -122,7 +122,7 @@
     direction: ltr;
   }
 
-  h1, h2, h3, h4 {
+  h1, h2, h3, h4, h5, h6, p, span, a, label, input, textarea, select {
     font-family: var(--font-arabic);
   }
 }

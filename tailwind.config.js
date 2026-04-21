@@ -15,7 +15,7 @@ export default {
             fontFamily: {
                 arabic: ['Noto Kufi Arabic', 'sans-serif'],
                 display: ['Playfair Display', 'serif'],
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['Noto Kufi Arabic', 'Figtree', ...defaultTheme.fontFamily.sans],
             },
             colors: {
                 border: "hsl(var(--border))",
