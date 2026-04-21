@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 20% 97%;
+    --foreground: 0 0% 25%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 25%;
+
+    --primary: 38 35% 42%;
+    --primary-foreground: 40 20% 97%;
+
+    --secondary: 35 30% 88%;
+    --secondary-foreground: 0 0% 25%;
+
+    --muted: 35 20% 93%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 40 45% 65%;
+    --accent-foreground: 0 0% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
+    --ring: 38 35% 42%;
+
+    --radius: 0.5rem;
+
+    --gold-dark: 40 30% 38%;
+    --gold-medium: 38 40% 52%;
+    --gold-light: 35 40% 78%;
+    --gold-pale: 35 35% 90%;
+    --charcoal: 0 0% 30%;
+
+    --font-arabic: 'Noto Kufi Arabic', sans-serif;
+    --font-display: 'Playfair Display', serif;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+  .dark {
+    --background: 0 0% 12%;
+    --foreground: 40 20% 97%;
+
+    --card: 0 0% 16%;
+    --card-foreground: 40 20% 97%;
+
+    --popover: 0 0% 16%;
+    --popover-foreground: 40 20% 97%;
+
+    --primary: 38 35% 42%;
+    --primary-foreground: 40 20% 97%;
+
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 40 20% 97%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 38 35% 42%;
+    --accent-foreground: 40 20% 97%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 40 20% 97%;
+
+    --border: 0 0% 24%;
+    --input: 0 0% 24%;
+    --ring: 38 35% 42%;
+
+    --gold-dark: 40 30% 65%;
+    --gold-medium: 38 40% 55%;
+    --gold-light: 35 40% 45%;
+    --gold-pale: 35 35% 20%;
+    --charcoal: 0 0% 15%;
+
+    --sidebar-background: 0 0% 16%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-arabic);
+  }
+
+  html[lang="ar"] {
+    direction: rtl;
+  }
+
+  html[lang="en"] {
+    direction: ltr;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-arabic);
+  }
+}
+
+@layer utilities {
+  .gradient-gold {
+    background: linear-gradient(135deg, hsl(var(--gold-dark)), hsl(var(--gold-medium)), hsl(var(--gold-light)));
+  }
+
+  .gradient-gold-text {
+    background: linear-gradient(135deg, hsl(var(--gold-dark)), hsl(var(--gold-medium)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gold-dark {
+    color: hsl(var(--gold-dark));
+  }
+
+  .text-charcoal {
+    color: hsl(var(--charcoal));
+  }
+
+  .dark .text-charcoal {
+    color: hsl(40 20% 97%);
+  }
+
+  .bg-gold-pale {
+    background-color: hsl(var(--gold-pale));
+  }
+
+  .border-gold-light {
+    border-color: hsl(var(--gold-light));
+  }
+
+  .hero-overlay {
+    background: linear-gradient(180deg, hsl(var(--gold-dark) / 0.85) 0%, hsl(var(--charcoal) / 0.7) 100%);
+  }
+
+  .shadow-gold {
+    box-shadow: 0 10px 40px -10px hsl(var(--gold-medium) / 0.3);
+  }
+
+  .nav-link-modern {
+    @apply inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-foreground font-semibold text-sm tracking-[0.18em] transition-all duration-300;
+  }
+
+  .nav-link-modern:hover {
+    @apply border-gold-light bg-gold-pale text-gold-dark;
+  }
+
+  .nav-link-modern:focus-visible {
+    @apply outline-none ring-2 ring-gold-medium/40;
+  }
+}
