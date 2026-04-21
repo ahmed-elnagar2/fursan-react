@@ -205,7 +205,7 @@ const QuoteRequest = ({ initialServices }: QuoteRequestProps) => {
         <section className="relative overflow-hidden border-b border-gold-light/50 bg-[radial-gradient(circle_at_top,rgba(207,175,103,0.22),transparent_42%),linear-gradient(180deg,#fffaf2_0%,#f6efe0_100%)] dark:bg-none dark:bg-background/50">
           <div className="container mx-auto grid max-w-7xl gap-10 px-6 pt-36 pb-16 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
             <div>
-              <span className="inline-flex rounded-full border border-gold-light bg-card/80 px-4 py-2 text-xs font-semibold tracking-[0.18em] text-gold-dark">
+              <span className="inline-flex rounded-full border border-gold-light bg-card/80 px-4 py-2 text-xs font-semibold text-gold-dark">
                 {t("nav_quote_request")}
               </span>
               <h1 className="mt-6 text-4xl font-bold leading-tight text-charcoal md:text-5xl">
@@ -345,8 +345,8 @@ const QuoteRequest = ({ initialServices }: QuoteRequestProps) => {
                               className="h-16 w-16 md:h-20 md:w-20 rounded-2xl object-cover shrink-0 shadow-sm"
                             />
                             <div className="flex-1 min-w-0">
-                              <p className="font-bold text-lg text-charcoal truncate">{service.title}</p>
-                              <p className="mt-1 text-sm leading-relaxed text-muted-foreground line-clamp-2">{service.description}</p>
+                              <p className="font-bold text-base md:text-lg text-charcoal leading-tight">{service.title}</p>
+                              <p className="mt-1 text-xs md:text-sm leading-relaxed text-muted-foreground line-clamp-2 md:line-clamp-3">{service.description}</p>
                             </div>
                             {serviceSubs.length > 0 && (
                               <div className={`shrink-0 pt-2 text-gold-dark/70 transition-transform duration-300 ease-spring ${isExpanded ? 'rotate-180 text-gold-dark' : 'rotate-0'}`}>
@@ -364,7 +364,7 @@ const QuoteRequest = ({ initialServices }: QuoteRequestProps) => {
                                 transition={{ type: "spring", stiffness: 300, damping: 25 }}
                                 className="border-t border-border/50 bg-gold-pale/5 shadow-inner"
                               >
-                                <div className="p-5 ps-8 md:ps-12 space-y-4">
+                                <div className="p-4 md:p-5 ps-6 md:ps-12 space-y-4">
                                   {/* Sub Services */}
                                   {serviceSubs.length > 0 && (
                                     <div className="space-y-3">
@@ -505,7 +505,7 @@ const QuoteRequest = ({ initialServices }: QuoteRequestProps) => {
             </div>
 
             <div className="space-y-6">
-              <div className="rounded-[2rem] border border-border bg-card/85 p-8 shadow-gold sticky top-28">
+              <div className="rounded-[2rem] border border-border bg-card/85 p-5 md:p-8 shadow-gold sticky top-28">
                 <div className="flex items-center justify-between mb-6">
                   <p className="text-sm font-semibold uppercase tracking-[0.2em] text-gold-dark">{t("quote_summary_title")}</p>
                   <Button
