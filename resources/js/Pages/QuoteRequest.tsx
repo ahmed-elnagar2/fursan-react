@@ -11,7 +11,8 @@ import { Checkbox } from "@/Components/ui/checkbox";
 import { toast } from "@/hooks/use-toast";
 import Navbar from "@/Components/Navbar";
 import Footer from "@/Components/Footer";
-import { Head } from "@inertiajs/react";
+import { Head, usePage } from "@inertiajs/react";
+import { PageProps } from "@/types";
 import logo from "@/assets/logo.jpg";
 import meatImg from "@/assets/meat-service.jpg";
 import storageImg from "@/assets/storage-service.jpg";
@@ -36,11 +37,12 @@ interface QuoteRequestProps {
   initialSettings?: Record<string, string>;
 }
 
-const QuoteRequest = ({ initialServices, initialSettings }: QuoteRequestProps) => {
+const QuoteRequest = ({ initialServices }: QuoteRequestProps) => {
   const { t, language, direction } = useLanguage();
-  
+  const { settings } = usePage<PageProps>().props;
+
   // Get search params for pre-selection
-  const searchParams = new URLSearchParams(window.location.search);
+  const searchParams = new URLSearchParams(typeof window !== 'undefined' ? window.location.search : "");
   const preselectedServiceIds = useMemo(() => searchParams.getAll("service"), []);
 
   const [selectedServices, setSelectedServices] = useState<string[]>(preselectedServiceIds);
@@ -63,8 +65,6 @@ const QuoteRequest = ({ initialServices, initialSettings }: QuoteRequestProps) =
     setCaptcha(generateCaptcha());
     setCaptchaInput("");
   };
-
-  const settings = initialSettings;
 
   let displayServices = (initialServices || [])
     .filter((s: any) => s.is_active !== false)
@@ -161,7 +161,7 @@ const QuoteRequest = ({ initialServices, initialSettings }: QuoteRequestProps) =
         name: form.name.trim().slice(0, 100),
         email: form.email.trim().slice(0, 255),
         phone: form.phone.trim().slice(0, 20),
-        message: form.details.trim().slice(0, 1000) || "",
+        message: form.details.trim().slice(0, 1000) || null,
         company: form.company.trim().slice(0, 100) || null,
         services: selectedServiceData,
       });
